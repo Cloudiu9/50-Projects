@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+/*
+ variables that store the colors
+ if we want to change colors, we just change here
+*/
+:root {
+  --line-border-fill: #3498db;
+  --line-border-empty: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f7fb;
+  font-family: "Muli", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 350px;
+}
+
+/* gray line behind blue */
+.progress-container::before {
+  /* when using ::before or ::after, you have to add content: '' */
+  content: "";
+  background-color: var(--line-border-empty);
+  position: absolute; /* within a position:relative container */
+  top: 50%;
+  left: 0;
+  transform: translateY((-50%)); /* middle */
+  height: 4px;
+  width: 100%;
+  z-index: -1; /* behind */
+}
+
+/* blue line */
+.progress {
+  background-color: var(--line-border-fill);
+  position: absolute; /* within a position:relative container */
+  top: 50%;
+  left: 0;
+  transform: translateY((-50%)); /* middle */
+  height: 4px;
+  width: 0%;
+  z-index: -1; /* behind */
+  transition: 0.4s ease;
+}
+
+.circle {
+  background-color: var(--line-border-empty);
+  color: #999;
+  border-radius: 50%; /* round */
+  height: 30px;
+  width: 30px;
+  /* to go over the numbers */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #e0e0e0;
+  transform: 0.6s ease;
+}
+
+.circle.active {
+  border-color: var(--line-border-fill);
+}
+
+.btn {
+  background-color: var(--line-border-fill);
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+/* effect when clicked */
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:disabled {
+  background-color: var(--line-border-empty);
+  cursor: not-allowed;
+}
