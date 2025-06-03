@@ -1,16 +1,142 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
+  font-family: "Lato", sans-serif;
+  background-color: #333;
+  color: #222;
+  overflow-x: hidden; /* only hides scroll bar on the x axis */
   margin: 0;
+}
+
+.container {
+  background-color: #fafafa;
+  /* want to rotate from the top position, not the middle (default) */
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh; /* takes up whole viewport */
+  padding: 50px;
+}
+
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  background-color: #ff7979;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%; /* to make it a circle */
+  position: relative; /* pos reltive so we can pos the buttons inside absolute */
+  transition: transform 0.5s linear;
+}
+
+/* when container has show-nav active, select circle */
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0; /* take off border */
+  font-size: 26px;
+  color: #fff;
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%; /* relative to circle */
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+/* when it has show-nav, target the nav li after it */
+.container.show-nav + nav li {
+  transform: translateX(0); /* bring it to original place */
+  transition-delay: 0.3s;
+}
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100; /* high so it's on top */
+}
+
+nav ul {
+  list-style-type: none; /* remove bullet-points */
+  padding-left: 30px;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 40px 0; /* top bot */
+  transform: translateX(-100%); /* bring it left */
+  transition: transform 0.4s ease-in;
+}
+
+/* make icons bigger */
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* li + direct li after that */
+/* moves the li after the initial one */
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+
+/* moves the li after the second one */
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+
+/* fix image FIXME */
+.content img {
+  max-width: 100%;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto; /* 50px top bot auto left right -> keeps it in the middle if we stretch it */
+}
+
+.content h1 {
+  margin: 0;
+}
+
+.content small {
+  color: #555;
+  font-style: italic;
+}
+
+.content p {
+  color: #333;
+  line-height: 1.5;
 }
