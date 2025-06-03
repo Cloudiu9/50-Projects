@@ -8,7 +8,7 @@ Each folder contains:
 - ✅ The **project files** (HTML, CSS, JS)
 - 🧠 My **personal notes** on key takeaways, concepts, or code explanations
 
-The projects are built without frameworks or libraries—just raw frontend code—to build fluency with DOM manipulation, CSS transitions/animations, and JavaScript logic.
+The projects are built without frameworks or libraries, just raw frontend code, to build fluency with DOM manipulation, CSS transitions/animations, and JavaScript logic.
 
 ## 🧱 Skills Practiced
 
