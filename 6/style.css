@@ -5,12 +5,45 @@
 }
 
 body {
+  background-color: #efedd6;
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  overflow: hidden;
   margin: 0;
+  overflow-x: hidden; /* gets rid of horizontal scroll bar */
+}
+
+h1 {
+  margin: 10px;
+}
+
+.box {
+  background-color: steelblue;
+  color: white;
+  display: flex; /* want to allign the h2 to the center */
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  /* offsets, 5px blur, rgba color */
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  transform: translateX(200%); /* moved 200% to the right (off the screen) */
+  transition: transform 0.4s ease;
+}
+
+/* pseudo-selector: makes all the even elements come in from the left */
+.box:nth-of-type(even) {
+  transform: translateX(-200%); /* moved 200% to the left (off the screen) */
+}
+
+.box.show {
+  transform: translateX(0); /* brings it back */
+}
+
+.box h2 {
+  font-size: 45px;
 }
