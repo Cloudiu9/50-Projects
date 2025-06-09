@@ -1,0 +1,51 @@
+Day 7: Split Landing Page
+
+1. 100% vs viewport width/height
+
+width: 100%
+
+    Relative to the parent element’s width
+
+    If the parent is smaller than the viewport, 100% is smaller than 100vw
+
+width: 100vw
+
+    Relative to the entire viewport width, regardless of parent
+
+    Always equals the full browser width (1vw = 1% of viewport width)
+
+2. When using pseudoselector ::before or ::after, you must set content = ''
+
+3. We can define 'global variables' on the root scope (useful for reusing colors)
+    :root{
+        --left-bg-color: rgba(87,84,236,0.7) /* rgb alpha ==> alpha is transparency */
+    }
+
+4. Positioning a text element in the middle:
+h1 {
+  font-size: 4rem;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%); /* middle of h1 in the middle */
+  white-space: nowrap; /* don't wrap on next line */
+}
+.btn {
+  position: absolute; /* within its container/side */
+  /* make the text inside centered */
+  display: flex;           IMP
+  align-items: center;     IMP
+  justify-content: center; IMP
+  left: 50%;
+  top: 40%;
+  transform: translateX((-50%));
+  text-decoration: none; /* remove underline */
+  color: white;
+  border: white solid 0.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 15rem;
+  padding: 1.5rem;
+}
