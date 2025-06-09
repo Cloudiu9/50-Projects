@@ -23,7 +23,7 @@ The projects are built without frameworks or libraries, just raw frontend code, 
 
 ## 🚧 My Goal
 
-To strengthen my frontend development skills through deliberate, daily practice—building visual intuition and muscle memory. This project also serves as a portfolio of work that reflects my progression and learning process.
+To strengthen my frontend development skills through deliberate, daily practice—building visual intuition and muscle memory.
 
 ## 📈 Progress
 
