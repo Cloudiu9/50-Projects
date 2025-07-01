@@ -49,3 +49,20 @@ h1 {
   width: 15rem;
   padding: 1.5rem;
 }
+
+Day 8: Wave Input Form
+We want to use JavaScript to wrap each letter in a span
+==> smooth transition and delay (transform translateY value to move it up)
+
+.btn:active {
+  transform: scale(0.98); /* from 1 to .98, adds a little effect when clicked */
+}
+
+  transform: translateY(-30px); /* negative number moves it up */
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* variable speed for transition (a curve) */
+}
