@@ -66,3 +66,17 @@ We want to use JavaScript to wrap each letter in a span
   min-width: 5px;
   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* variable speed for transition (a curve) */
 }
+
+Day 9: Sound Board
+/* creating the buttons dynamically from an array */
+
+const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'wrong']
+
+sounds.forEach(sound => {
+    const btn = document.createElement('button')
+    btn.classList.add('btn')
+
+    btn.innerText = sound /* from the 'sounds' array */
+
+    document.getElementById('buttons').appendChild(btn)
+})
