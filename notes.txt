@@ -80,3 +80,25 @@ sounds.forEach(sound => {
 
     document.getElementById('buttons').appendChild(btn)
 })
+
+Day 10: Dad Jokes
+-- auto horizontally centers the block element by equally distributing leftover horizontal space on both sides.
+
+margin: 50px auto 
+
+
+-- cleaner and more readable than just using .then
+-- needs to have Accept header
+async function generateJoke() {
+  const config = {
+    headers: {
+      Accept: "application/json",
+    },
+  };
+
+  const res = await fetch("https://icanhazdadjoke.com/", config);
+
+  const data = await res.json();
+
+  jokeEl.innerHTML = data.joke;
+}
