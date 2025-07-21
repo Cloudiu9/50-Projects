@@ -102,3 +102,21 @@ async function generateJoke() {
 
   jokeEl.innerHTML = data.joke;
 }
+
+Day 11: Event KeyCodes
+IMP
+Instead of hiding/showing classes (classList.add/remove/toggle), you can just insert what you need with div.innerHTML:
+window.addEventListener("keydown", (e) => {
+  insert.innerHTML = `        <div class="key">
+          ${e.key === " " ? "Space" : e.key}
+          <small>event.key</small>
+        </div>
+        <div class="key">
+          ${e.keyCode}
+          <small id="keyCode">event.keyCode</small>
+        </div>
+        <div class="key">
+          ${e.code}
+          <small id="code">event.code</small>
+        </div>`;
+});
