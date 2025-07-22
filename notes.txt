@@ -120,3 +120,14 @@ window.addEventListener("keydown", (e) => {
           <small id="code">event.code</small>
         </div>`;
 });
+
+Day 12: FAQ Collapse
+dribble.com (inspiration for projects) IMP
+
+Toggle a class on the parent node IMP
+
+btns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.parentNode.classList.toggle("active");
+  });
+});
