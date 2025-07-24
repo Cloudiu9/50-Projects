@@ -18,7 +18,8 @@ textarea.addEventListener("keyup", (e) => {
 const createTags = function (input) {
   const tags = input
     .split(",")
-    .filter((tag) => tag.trim() !== "".map((tag) => tag.tim())); // cant be empty string, remove all whitespaces
+    .filter((tag) => tag.trim() !== "")
+    .map((tag) => tag.trim()); // cant be empty string, remove all whitespaces
 
   tagsEl.innerHTML = "";
 
@@ -56,7 +57,7 @@ function randomSelect() {
   }, times * 100);
 }
 
-const randomTag = function () {
+const pickRandomTag = function () {
   const tags = document.querySelectorAll(".tag"); // nodelist, similar to array
 
   return tags[Math.floor(Math.random() * tags.length)];
