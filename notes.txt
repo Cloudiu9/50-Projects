@@ -153,3 +153,33 @@ Day 14: Animated Navigation
 .icon:focus {
   outline: 0;
 }
+
+Day 15: Incrementing Counter
+
+Social media font awesome icons have the class 'fab'
+fa-3x makes icon bigger
+
+      <i class="fab fa-twitter fa-3x"></i>
+
+IMP When alligning text in the middle:
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 30px 50px;
+}
+
+.counter {
+  font-size: 60px;
+  margin-top: 10px;
+}
+
+IMP Easy universal media-query (maybe?)
+
+@media (max-width: 580px) {
+  body {
+    flex-direction: column;
+  }
+}
