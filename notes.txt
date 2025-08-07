@@ -183,3 +183,53 @@ IMP Easy universal media-query (maybe?)
     flex-direction: column;
   }
 }
+Day 16: Drink Water
+
+.container {
+  display: flex;
+  justify-content: center; /* centers item horizontally */
+  align-items: center;     /* centers item vertically */
+  text-align: center;  /* centers text inside the item */
+}
+
+// make items flow over to the next row
+
+.cups {
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+}
+
+// content inside .remained gets vertically centered within that extra space. (flex: 1)
+// flex: 1 → "fill all remaining space"
+
+.remained {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1; /* puts it in the middle? */
+}
+
+// add event listener to multiple elements at once
+
+smallCups.forEach((cup, idx) => {
+    cup,addEventListener('click', () => highlightCups(idx))
+});
+
+
+Day 17: Movie App
+
+// hide element out of view (move it below)
+
+.overview {
+  background-color: white;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%); /* pushes it down 100% and 1% out of view */
+}
