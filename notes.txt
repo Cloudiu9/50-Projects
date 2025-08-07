@@ -217,3 +217,19 @@ Day 16: Drink Water
 smallCups.forEach((cup, idx) => {
     cup,addEventListener('click', () => highlightCups(idx))
 });
+
+
+Day 17: Movie App
+
+// hide element out of view (move it below)
+
+.overview {
+  background-color: white;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%); /* pushes it down 100% and 1% out of view */
+}
