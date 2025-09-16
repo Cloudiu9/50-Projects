@@ -249,3 +249,18 @@ Day 18: Background Slider
 }
 
 // transform: translateY(-50%); /* moves to the EXACT middle */
+
+Day 19: Theme Clock
+
+// center circle directly in the middle of position relative container
+
+.center-point {
+  background-color: #e74c3c;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%); /* puts it directly in the middle */
+  border-radius: 50%; /* makes it a circle */
+}
