@@ -287,3 +287,17 @@ button .circle {
     opacity: 0; /* as it scales up, it dissapears */
   }
 }
+
+Day 21: Drag N Drop
+// making a div draggable
+
+      <div class="fill" draggable="true"></div>
+
+// which then fires off all of these events:
+
+  fill.addEventListener("dragstart", dragStart);
+  fill.addEventListener("dragend", dragEnd);
+  empty.addEventListener("dragover", dragOver);
+  empty.addEventListener("dragenter", dragEnter);
+  empty.addEventListener("dragleave", dragLeave);
+  empty.addEventListener("dop", dragDrop);
