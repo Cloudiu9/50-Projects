@@ -301,3 +301,24 @@ Day 21: Drag N Drop
   empty.addEventListener("dragenter", dragEnter);
   empty.addEventListener("dragleave", dragLeave);
   empty.addEventListener("dop", dragDrop);
+
+Day 22: Drawing Pad
+
+/* targets all direct children of toolbox */
+.toolbox > * {
+  background-color: white;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  height: 50px;
+  width: 50px;
+  margin: 0.25rem;
+  padding: 0.25rem;
+}
+
+/* targets last child of toolbox */
+.toolbox > *:last-child {
+  margin-left: auto;
+}
