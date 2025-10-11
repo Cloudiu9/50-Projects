@@ -322,3 +322,18 @@ Day 22: Drawing Pad
 .toolbox > *:last-child {
   margin-left: auto;
 }
+
+Day 23: Kinetic Loader
+/* making a triangle in css */
+.kinetic::after,
+.kinetic::before {
+  /* have to use with after/before */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  border: 50px solid transparent;
+  border-bottom-color: white;
+}
