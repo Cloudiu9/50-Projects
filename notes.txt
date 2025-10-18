@@ -337,3 +337,19 @@ Day 23: Kinetic Loader
   border: 50px solid transparent;
   border-bottom-color: white;
 }
+
+Day 24: Content Placeholder
+/* make text not be over image */
+.card-header img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* make profile img round */
+.profile-img {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 40px;
+  width: 40px;
+}
