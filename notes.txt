@@ -393,3 +393,27 @@ Day 25: Sticky Navbar
 .nav.active .container {
   padding: 10px 0;
 }
+
+Day 27: Toast Notification
+
+/* default button */
+
+.btn {
+  background-color: white;
+  color: rebeccapurple;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+/* btn click effect */
+.btn:active {
+  transform: scale(0.98);
+}
