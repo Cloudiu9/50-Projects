@@ -417,3 +417,34 @@ Day 27: Toast Notification
 .btn:active {
   transform: scale(0.98);
 }
+
+Day 28: Github Profiles
+using randomuser.me api for placeholder images
+<img src="https://randomuser.me/api/portraits/men/30.jpg" alt="" class="avatar"/>
+
+padding: 1rem; /* => multiplier of the root HTML element, default is 16px ==> 1rem = 16px */
+
+changing color of placeholder text:
+.user-form input::placeholder {
+  color: #bbb;
+}
+
+quick responsiveness: change max-width and flex-direction to column
+
+@media (max-width: 500px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-form {
+    max-width: 400px;
+  }
+}
+
+(after including axios from cdnjs) 
+axios() === axios.get() (http library for api requests)
+
+  axios(APIURL + username)
+    .then((res) => console.log(res.data))  // we DON'T need a second .then here (axios) IMP
+    .catch((err) => console.log(err));
